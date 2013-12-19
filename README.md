@@ -13,8 +13,11 @@ With `isInside()` - it can determine whether the click/touch event has occured i
 
 Note; We don't want anything to happen if the click event occured inside this DOM element: `<div class="box" id="js-box" data-id="box">`
 
-- So, we pass `isInside` the **attribute name** of the DOM element to check for. The uncommented choice is the `class` attribute (but I could have gone with the `id` or `data-id` attribute)
-- Then we pass `isInside` the expected **value** of that attribute - in this case `box`
+Here's what we pass to isInside:
+`isInside( 'class', 'box', event )`
+
+- Firstly, we pass the **attribute name** of the DOM element to check for. The uncommented choice is the `class` attribute (but I could have gone with the `id` or `data-id` attribute)
+- Then we pass the expected **value** of that attribute - in this case `box`
 - We finally pass it the `event` object
 - The method does the check, and returns `true` or `false`
 - If it's `false`, we output a simply message to the console
